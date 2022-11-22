@@ -1,10 +1,10 @@
-import express, { Application, Request, Response } from 'express';
+import express, { Application, Request, Response } from "express";
 const PORT = 3000;
 
 const app: Application = express();
-app.get('/', (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.json({
-    message: 'Hello World ',
+    message: "Hello World ",
   });
 });
 // start express server
