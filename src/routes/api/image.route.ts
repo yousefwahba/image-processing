@@ -26,7 +26,6 @@ routes.get("/", async (req: Request, res: Response) => {
     __dirname,
     `../../../images/after/${filename}-${height}-${width}.jpg`
   )}`;
-  console.log(!fs.existsSync(imagePathAfter), !fs.existsSync(imagePathBefore));
   //image file processing
   if (!fs.existsSync(imagePathAfter) && fs.existsSync(imagePathBefore)) {
     const temp = await sharp(path.resolve(imagePathBefore))
