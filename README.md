@@ -64,7 +64,3 @@ then add this url with your custom width and height
 ```bash
   npm run test
 ```
-
-## Hot fixed bug (need to solve)
-
-#### fix error handling
