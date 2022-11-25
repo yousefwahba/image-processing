@@ -11,7 +11,10 @@ routes.get("/", async (req: Request, res: Response) => {
     const filename = req.query.filename as unknown as string;
     const height = parseInt(req.query.height as unknown as string);
     const width = parseInt(req.query.width as unknown as string);
-
+    if (filename === undefined) {
+      res.send("Please enter image name");
+      return;
+    }
     //get image path (before resize and after resize)
     //before
     const imagePathBefore = `${path.resolve(
